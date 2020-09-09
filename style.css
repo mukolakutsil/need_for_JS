@@ -1,0 +1,19 @@
+.hide {
+    display: none;
+}
+
+.car {
+    background: transparent url(./image/enemy2.png) center / cover;
+    height: 100px;
+    width: 50px;
+    border-radius: 20%;
+}
+
+.start {
+    width: 523px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    border-radius: 20%;
+
+}
