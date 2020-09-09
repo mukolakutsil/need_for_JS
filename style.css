@@ -1,9 +1,13 @@
+body{
+    background-color: green;
+}
+
 .hide {
     display: none;
 }
 
 .car {
-    background: transparent url(./image/enemy2.png) center / cover;
+    background: transparent url(./image/car_9.png) center / cover;
     height: 100px;
     width: 50px;
     border-radius: 20%;
