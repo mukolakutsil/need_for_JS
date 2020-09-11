@@ -132,7 +132,8 @@ table {
     display: none;
 }
 
-.car, .enemy {
+.car,
+.enemy {
     height: 100px;
     width: 50px;
     background: transparent url(./image/car_9.png) center / cover;
@@ -141,13 +142,34 @@ table {
     bottom: 10px;
 }
 
+.startBtn {
+
+    width: 500px;
+
+}
+
 .start {
     width: 523px;
-    margin: 0 auto;
-    margin-top: 100px;
+
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 15px;
+    cursor: pointer;
 
     border-radius: 20%;
 
+}
+
+.score {
+    width: 200px;
+    position: absolute;
+    margin-left: 1000px;
+    margin-top: 100px;
+    font-family: sens-serif;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: darkred;
 }
 
 .gameArea {
