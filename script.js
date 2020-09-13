@@ -20,7 +20,7 @@ const key = {
 const setting = {
     start: false,
     score: 0,
-    speed: 8,
+    speed: 0,
     traffic: 3
 };
 
@@ -55,6 +55,7 @@ function startGame() {
         gameArea.appendChild(enemy);
     }
 
+    document.body.style.backgroundColor = 'lightskyblue';
     setting.start = true;
     gameArea.appendChild(car);
     car.style.left = '125px';
@@ -62,15 +63,49 @@ function startGame() {
     car.style.bottom = '10px';
     setting.x = car.offsetLeft;
     setting.y = car.offsetTop;
+    setting.score = 0;
+    setting.speed = 8;
+
 
     requestAnimationFrame(playGame)
 };
+
+function newLevel2() {
+
+    if (setting.score > 3000) {
+        setting.speed = 12;
+        document.body.style.backgroundColor = 'dodgerblue';
+
+    }
+};
+
+function newlevel3() {
+
+    if (setting.score > 8000) {
+        setting.speed = 15;
+        document.body.style.backgroundColor = 'indigo';
+
+    }
+}
+
+function newlevel4() {
+
+    if (setting.score > 12000) {
+        setting.speed = 18;
+        document.body.style.backgroundColor = 'black';
+
+    }
+}
+
 
 function playGame() {
     if (setting.start) {
 
         setting.score += setting.speed;
         score.innerHTML = `SCORE <br> ${setting.score}`;
+
+
+
         moveRoad();
         moveEnemy();
         if (key.ArrowLeft && setting.x > 0) {
@@ -93,6 +128,12 @@ function playGame() {
         car.style.top = setting.y + 'px';
 
         requestAnimationFrame(playGame)
+        newLevel2();
+        newlevel3();
+        newlevel4();
+
+
+
     }
 };
 
